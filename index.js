@@ -20,24 +20,22 @@ $(function(){
                 </button>
             </div>
         </li>`);
-  },
-
-    //check and uncheck by clicking
-    //if click, toggle class from css
-
-    $('.').on('click', event => {
-       const itemID = $(this).currentTarget;
-       $('ul')
-    })
-},
-
-    //delete item
-    //1. listen for click on delete,
-    //2. use remove to remove list item associated with the element
-
-    $('').on('click', event => {
-
-    })
-    
   });
+
+  //check and uncheck by clicking
+  //if click, toggle class from css
+
+  $('#shopping-list').on('click', event => {
+    const itemID = $(this).currentTarget;
+    console.log(itemID);
+    //    $(itemID).closest('li').toggleClass('.shopping-item__checked');
+  });
+
+  //delete item
+  //1. listen for click on delete,
+  //2. use remove to remove list item associated with the element
+
+//   $('#shopping-list').on('click', event => {
+
+//   });
 });
