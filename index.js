@@ -29,7 +29,7 @@ $(function(){
     event => {
       const ohFun = $(event.target);
       console.log(ohFun);
-      $(ohFun).closest('shopping-item').toggleClass('shopping-item__checked');
+      $(ohFun).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
 
   /* why doesn't the CSS render rightly here? */
