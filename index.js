@@ -27,9 +27,9 @@ $(function(){
 
   $('ul').on('click', '.shopping-item-toggle',
     event => {
-      const ohFun = $(event.target);
-      console.log(ohFun);
-      $(ohFun).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+      const theTarget = $(event.target);
+      console.log(theTarget);
+      $(theTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
 
   /* why doesn't the CSS render rightly here? */
@@ -38,7 +38,8 @@ $(function(){
   //1. listen for click on delete,
   //2. use remove to remove list item associated with the element
 
-//   $('#shopping-list').on('click', event => {
-
-//   });
+  $('ul').on('click', '.shopping-item-delete', event => {
+    const theTarget = $(event.target);
+    $(theTarget).closest('li').remove();
+  });
 });
