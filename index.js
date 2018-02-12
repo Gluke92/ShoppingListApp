@@ -25,11 +25,14 @@ $(function(){
   //check and uncheck by clicking
   //if click, toggle class from css
 
-  $('#shopping-list').on('click', event => {
-    const itemID = $(this).currentTarget;
-    console.log(itemID);
-    //    $(itemID).closest('li').toggleClass('.shopping-item__checked');
-  });
+  $('ul').on('click', '.shopping-item-toggle',
+    event => {
+      const ohFun = $(event.target);
+      console.log(ohFun);
+      $(ohFun).closest('shopping-item').toggleClass('shopping-item__checked');
+    });
+
+  /* why doesn't the CSS render rightly here? */
 
   //delete item
   //1. listen for click on delete,
